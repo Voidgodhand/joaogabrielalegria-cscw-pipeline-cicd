@@ -6,10 +6,10 @@ on:
   workflow_dispatch:
   
 jobs:
-  m1:
+  mensagem_1:
     runs-on: ubuntu-latest
     environment:
-      name: mensagem 1
+      name: m1
       url: https://voidgodhand.github.io/joaogabrielalegria-cscw-pipeline-cicd/index.html
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -19,12 +19,12 @@ jobs:
       - name: mensagem 1
         run: echo Present day... haha
 
-  m2:
+  mensagem_2:
     runs-on: ubuntu-latest
     environment:
-      name: mensagem 2
+      name: m2
       url: https://voidgodhand.github.io/joaogabrielalegria-cscw-pipeline-cicd/index.html
-    needs: m1
+    needs: mensagem_1
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
@@ -33,12 +33,12 @@ jobs:
       - name: mensagem 2
         run: echo PRESENT TIME
 
-  m3:
+  mensagem_3:
     runs-on: ubuntu-latest
     environment:
-      name: mensagem 3
+      name: m3
       url: https://voidgodhand.github.io/joaogabrielalegria-cscw-pipeline-cicd/index.html
-    needs: m2
+    needs: mensagem_2
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
