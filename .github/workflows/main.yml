@@ -1,0 +1,45 @@
+name: CI
+ 
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  
+jobs:
+  m1:
+    runs-on: ubuntu-latest
+    environment:
+      name: mensagem 1
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Present day... haha
+
+  m2:
+    runs-on: ubuntu-latest
+    environment:
+      name: mensagem 2
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo PRESENT TIME
+
+  m3:
+    runs-on: ubuntu-latest
+    environment:
+      name: mensagem 3
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo HAHAHAHAHAHAHA
+
+
